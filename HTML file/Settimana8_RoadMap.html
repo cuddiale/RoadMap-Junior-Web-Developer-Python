@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Settimana 8 – Flask Base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+        }
+
+        h2 {
+            background: #059669;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        h3 {
+            color: #059669;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #059669;
+            text-decoration: none;
+        }
+
+        .exercise {
+            background: #ecfdf5;
+            padding: 10px;
+            border-left: 4px solid #10b981;
+            margin-top: 10px;
+        }
+
+        .task {
+            background: #d1fae5;
+            padding: 10px;
+            border-left: 4px solid #059669;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🗓️ Settimana 8 – Flask Base</h1>
+
+    <section>
+        <h2>Giorno 1 – Introduzione a Flask & Routing</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Cos'è Flask</li>
+            <li>Struttura progetto</li>
+            <li>Routing</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://www.html.it/guide/guida-flask/" target="_blank">Guida Flask (ITA)</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Hello World Flask</li>
+                <li>Route multiple</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> App Flask con 3 pagine
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 2 – Template Jinja</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>render_template</li>
+            <li>Variabili</li>
+            <li>Template inheritance</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://flask.palletsprojects.com/en/latest/templating/" target="_blank">Template Jinja</a>
+            </li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Passare dati al template</li>
+                <li>Base template</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Layout HTML condiviso
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 3 – Request & Response</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>GET</li>
+            <li>POST</li>
+            <li>request.form</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://flask.palletsprojects.com/en/latest/quickstart/#accessing-request-data"
+                    target="_blank">Request Flask</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Form HTML + Flask</li>
+                <li>Gestione input</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Form di inserimento dati
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 4 – CRUD: Create & Read</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Creazione elementi</li>
+            <li>Visualizzazione lista</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>CRUD pattern</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Aggiungere elementi</li>
+                <li>Mostrare lista</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Prima parte CRUD
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 5 – CRUD: Update & Delete</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Modifica dati</li>
+            <li>Cancellazione</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>CRUD completo Flask</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Modifica record</li>
+                <li>Cancella record</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> CRUD completo
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 6 – Refactoring & UX Base</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Flash messages</li>
+            <li>Redirect</li>
+            <li>UX minimale</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>Flask flash messages</li>
+        </ul>
+
+        <div class="task">
+            <strong>Task:</strong> Migliorare esperienza utente
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 7 – Roadmap Generale con Esercizi</h2>
+
+        <h3>Attività</h3>
+        <ul>
+            <li>Pulizia codice</li>
+            <li>Commenti</li>
+            <li>README</li>
+        </ul>
+
+        <div class="task">
+            <strong>Task:</strong>
+            <ul>
+                <li>Commit finale</li>
+                <li>Push su GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Settimana 8 completata – Backend Flask operativo
+    </footer>
+
+</body>
+
+</html>

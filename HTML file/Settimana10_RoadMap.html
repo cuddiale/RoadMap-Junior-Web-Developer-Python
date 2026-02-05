@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Settimana 10 – Sicurezza Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+        }
+
+        h2 {
+            background: #0f172a;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        h3 {
+            color: #0f172a;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #0f172a;
+            text-decoration: none;
+        }
+
+        .exercise {
+            background: #e5e7eb;
+            padding: 10px;
+            border-left: 4px solid #334155;
+            margin-top: 10px;
+        }
+
+        .task {
+            background: #cbd5f5;
+            padding: 10px;
+            border-left: 4px solid #1e293b;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🗓️ Settimana 10 – Sicurezza Web</h1>
+
+    <section>
+        <h2>Giorno 1 – Introduzione alla Sicurezza Web</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Cos'è la sicurezza web</li>
+            <li>Threat model</li>
+            <li>Errori comuni</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Analizzare vulnerabilità app precedente</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Lista rischi della tua web app
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 2 – Password Hashing</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Password in chiaro ❌</li>
+            <li>Hashing</li>
+            <li>bcrypt / werkzeug.security</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>Password hashing Flask</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Generare hash password</li>
+                <li>Verifica password</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Salvare password in modo sicuro
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 3 – SQL Injection</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Cos'è SQL Injection</li>
+            <li>Query vulnerabili</li>
+            <li>Query parametrizzate</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://owasp.org/www-community/attacks/SQL_Injection" target="_blank">OWASP SQL Injection</a>
+            </li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Esempio SQL Injection</li>
+                <li>Fix con parametri</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Mettere in sicurezza tutte le query
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 4 – Sessioni & Autenticazione</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Sessioni Flask</li>
+            <li>Login / Logout</li>
+            <li>Protezione route</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>Flask session</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Gestione sessione</li>
+                <li>Logout sicuro</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Sistema login funzionante
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 5 – Ruoli & Autorizzazioni</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Ruoli utente</li>
+            <li>Admin / User</li>
+            <li>Access control</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Verifica ruolo</li>
+                <li>Protezione pagine admin</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Login con ruoli
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 6 – OWASP Top 10 (Overview)</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Broken Access Control</li>
+            <li>XSS</li>
+            <li>Security Misconfiguration</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Individuare vulnerabilità</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Checklist sicurezza app
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 7 – Roadmap Generale con Esercizi</h2>
+
+        <h3>Attività</h3>
+        <ul>
+            <li>Refactoring sicurezza</li>
+            <li>README (sezione sicurezza)</li>
+            <li>Commenti</li>
+        </ul>
+
+        <div class="task">
+            <strong>Task:</strong>
+            <ul>
+                <li>Commit finale</li>
+                <li>Push su GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Settimana 10 completata – Web app sicura
+    </footer>
+
+</body>
+
+</html>

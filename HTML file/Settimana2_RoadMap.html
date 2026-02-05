@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Settimana 2 – Strutture Dati & File</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+        }
+
+        h2 {
+            background: #16a34a;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        h3 {
+            color: #16a34a;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #16a34a;
+            text-decoration: none;
+        }
+
+        .exercise {
+            background: #ecfdf5;
+            padding: 10px;
+            border-left: 4px solid #22c55e;
+            margin-top: 10px;
+        }
+
+        .task {
+            background: #f0fdf4;
+            padding: 10px;
+            border-left: 4px solid #16a34a;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🗓️ Settimana 2 – Strutture Dati & File</h1>
+
+    <section>
+        <h2>Giorno 1 – Liste</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Liste</li>
+            <li>Indicizzazione</li>
+            <li>append, remove, len</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://docs.python.org/it/3/tutorial/datastructures.html" target="_blank">Strutture dati
+                    Python (ITA)</a></li>
+        </ul>
+
+        <div class="exercise">
+            <strong>Esercizi:</strong>
+            <ul>
+                <li>Creare una lista di numeri</li>
+                <li>Somma e media</li>
+                <li>Ricerca elemento</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Gestione lista spesa
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 2 – Dizionari</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Dizionari</li>
+            <li>Chiave / valore</li>
+            <li>get(), keys(), values()</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://docs.python.org/it/3/tutorial/datastructures.html#dictionaries"
+                    target="_blank">Dizionari Python</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Dizionario utente</li>
+                <li>Accesso ai dati</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Rubrica contatti (in memoria)
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 3 – Tuple & Strutture Complesse</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Tuple</li>
+            <li>Liste di dizionari</li>
+            <li>Strutture nidificate</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://docs.python.org/it/3/tutorial/datastructures.html#tuples-and-sequences"
+                    target="_blank">Tuple Python</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Coordinate (x,y)</li>
+                <li>Lista contatti</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Rubrica avanzata (lista di dizionari)
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 4 – File JSON</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>json.load()</li>
+            <li>json.dump()</li>
+            <li>Persistenza dati</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://docs.python.org/it/3/library/json.html" target="_blank">Modulo JSON</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Scrivere file JSON</li>
+                <li>Leggere file JSON</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Salvare rubrica su file JSON
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 5 – File CSV</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>CSV reader</li>
+            <li>CSV writer</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://docs.python.org/it/3/library/csv.html" target="_blank">Modulo CSV</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Leggere CSV</li>
+                <li>Stampare dati</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Esportare rubrica in CSV
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 6 – try / except</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Gestione errori</li>
+            <li>File not found</li>
+            <li>Input errato</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://docs.python.org/it/3/tutorial/errors.html" target="_blank">Errori ed eccezioni</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Gestione input errato</li>
+                <li>File mancante</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Rendere robusta la rubrica
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 7 – Roadmap Generale con Esercizi</h2>
+
+        <h3>Progetto</h3>
+        <ul>
+            <li>Rubrica contatti completa</li>
+            <li>Menu testuale</li>
+            <li>Salvataggio JSON</li>
+            <li>Export CSV</li>
+        </ul>
+
+        <div class="task">
+            <strong>Task:</strong>
+            <ul>
+                <li>Pulizia codice</li>
+                <li>Commenti</li>
+                <li>README</li>
+                <li>Commit finale</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Settimana 2 completata – Strutture dati e file system
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Settimana 11 – API REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+        }
+
+        h2 {
+            background: #0284c7;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        h3 {
+            color: #0284c7;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #0284c7;
+            text-decoration: none;
+        }
+
+        .exercise {
+            background: #e0f2fe;
+            padding: 10px;
+            border-left: 4px solid #38bdf8;
+            margin-top: 10px;
+        }
+
+        .task {
+            background: #bae6fd;
+            padding: 10px;
+            border-left: 4px solid #0284c7;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🗓️ Settimana 11 – API REST</h1>
+
+    <section>
+        <h2>Giorno 1 – Cos’è REST</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Cos’è un’API</li>
+            <li>REST principles</li>
+            <li>Endpoint</li>
+            <li>HTTP methods</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li><a href="https://flask.palletsprojects.com/en/latest/" target="_blank">Flask Docs</a></li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Analizzare API pubbliche</li>
+                <li>Identificare endpoint</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Disegnare struttura API (a mano o markdown)
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 2 – API Flask (GET)</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Flask come API</li>
+            <li>return JSON</li>
+            <li>status code</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>Flask JSON response</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Endpoint GET</li>
+                <li>Risposta JSON</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> API GET utenti
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 3 – API Flask (POST, PUT, DELETE)</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>POST</li>
+            <li>PUT</li>
+            <li>DELETE</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Creare risorse</li>
+                <li>Modificare risorse</li>
+                <li>Cancellare risorse</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> CRUD API completo
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 4 – JSON & Validazione</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>request.json</li>
+            <li>Validazione input</li>
+            <li>Error handling</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Controllo dati JSON</li>
+                <li>Risposte di errore</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> API robusta
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 5 – JWT</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Cos’è JWT</li>
+            <li>Token</li>
+            <li>Autenticazione API</li>
+        </ul>
+
+        <h3>Studio</h3>
+        <ul>
+            <li>JWT Flask</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Generare token</li>
+                <li>Proteggere endpoint</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> Login API con JWT
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 6 – Protezione Endpoint</h2>
+
+        <h3>Argomenti</h3>
+        <ul>
+            <li>Decorators</li>
+            <li>Token required</li>
+        </ul>
+
+        <div class="exercise">
+            <ul>
+                <li>Proteggere CRUD</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <strong>Task:</strong> API sicura
+        </div>
+    </section>
+
+    <section>
+        <h2>Giorno 7 – Roadmap Generale con Esercizi</h2>
+
+        <h3>Attività</h3>
+        <ul>
+            <li>Refactoring</li>
+            <li>README API</li>
+            <li>Esempi request</li>
+        </ul>
+
+        <div class="task">
+            <strong>Task:</strong>
+            <ul>
+                <li>Commit finale</li>
+                <li>Push su GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Settimana 11 completata – API REST professionali
+    </footer>
+
+</body>
+
+</html>
