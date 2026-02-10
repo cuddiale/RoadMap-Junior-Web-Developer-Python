@@ -4,7 +4,7 @@
 
 nome = str(input("Come ti chiami??  "))
 eta = int(input("Quanti anni hai??  ")) 
-anno = int(input("Fra quanti anni vuoi vuoi calcolare la tua età??  "))
+anno = int(input("Fra quanti anni vuoi calcolare la tua età??  "))
 calcolo = int(eta + anno)
 
 print(f"Ciao {nome}, complimenti per i tuoi {eta} anni.") 
