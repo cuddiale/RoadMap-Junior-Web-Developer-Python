@@ -21,7 +21,7 @@ for x in menu:
     
 # stampare numeri da 1 a 10
     
-for i in range(10):
+for i in range(11):
     print(i)
     
 # stampiamo i numeri da 1 a 10 col ciclo while
@@ -30,6 +30,16 @@ i= 0 #dichiaro variabile i è la imposto a 0
 while i <11:
     print(i)
     i+=1
+    
+#somma numeri stampati
+
+somma = 0
+
+for i in range(1, 11):
+    print(i)
+    somma += i
+
+print("Somma:", somma)
 
 
 
