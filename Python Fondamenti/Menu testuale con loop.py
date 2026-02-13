@@ -1,21 +1,23 @@
-# Menu testuale con loop, creare una lista e stampare questa lista nel ciclo 
+"""" 
+Creare Menu testuale stampato con loop 
+Stampa numeri 1–10
+Somma numeri stampati
 
-# Stampa numeri 1–10
-# Somma numeri stampati
+for
+while
+range()
 
-# for
-# while
-# range()
+"""
 
+# creo variabile menù
+ 
 menu = ["pizza", "pasta", "carne", "pesce"]
+
+# stampo col ciclo for tutti gli elementi della lista
 
 for x in menu:
     print(x)
     
-# stampare il primo e il secondo elemento della lista
-
-for y in menu:
-    print(y[:2])
     
 # stampare numeri da 1 a 10
     
@@ -23,7 +25,8 @@ for i in range(10):
     print(i)
     
 # stampiamo i numeri da 1 a 10 col ciclo while
-i= 0
+
+i= 0 #dichiaro variabile i è la imposto a 0
 while i <11:
     print(i)
     i+=1
