@@ -44,11 +44,11 @@ while True:
   
         if scelta == "0":
             uscita_loop = input("Confermi di uscire? Y o N ").lower()
-                if uscita_loop == "y":    #inserito una doppia conferma per l'uscita
+            if uscita_loop == "y":    #inserito una doppia conferma per l'uscita
                     print("Il programma si sta chiudendo!")
                     print("Grazie per aver usato la calcolatrice!")
                     break   
-                else:
+            else:
                     continue     
                 
         elif scelta == "1":
