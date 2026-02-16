@@ -1,0 +1,42 @@
+Git – Terminale vs Funzionalità Desktop
+
+| Azione                         | Terminale Git               | Equivalente in GitHub Desktop / Funzionalità GUI |
+| ------------------------------ | --------------------------- | ------------------------------------------------ |
+| Inizializzare un repository    | `git init`                  | `File → New Repository`                          |
+| Clonare un repository          | `git clone URL`             | `File → Clone Repository`                        |
+| Controllare lo stato dei file  | `git status`                | Finestra principale mostra file modificati       |
+| Aggiungere file al commit      | `git add file.py`           | Selezioni le checkbox dei file modificati        |
+| Fare il commit                 | `git commit -m "Messaggio"` | `Commit to main/master` con messaggio            |
+| Visualizzare log commit        | `git log`                   | Cronologia commit nella scheda History           |
+| Creare un branch               | `git branch nome-branch`    | `Branch → New Branch`                            |
+| Cambiare branch                | `git checkout nome-branch`  | Selezioni il branch dal menu a tendina           |
+| Unire branch                   | `git merge branch-name`     | `Branch → Merge into current branch`             |
+| Scaricare aggiornamenti remoti | `git pull`                  | `Fetch origin / Pull`                            |
+| Inviare modifiche al remoto    | `git push`                  | `Push origin`                                    |
+| Annullare modifiche locali     | `git checkout -- file.py`   | `Discard Changes` su un file                     |
+| Eliminare branch               | `git branch -d nome-branch` | `Branch → Delete Branch`                         |
+
+
+
+
+Terminale base in VS Code (Linux/Mac / Windows PowerShell)
+
+| Azione                      | Comando Linux/Mac              | Comando Windows PowerShell       | Note                           |
+| --------------------------- | ------------------------------ | -------------------------------- | ------------------------------ |
+| Mostrare percorso corrente  | `pwd`                          | `Get-Location`                   |                                |
+| Elencare file/cartelle      | `ls`                           | `dir`                            | `ls -l` per dettagli           |
+| Entrare in cartella         | `cd nome_cartella`             | `cd nome_cartella`               | `cd ..` per cartella superiore |
+| Creare cartella             | `mkdir nome_cartella`          | `mkdir nome_cartella`            |                                |
+| Creare file vuoto           | `touch file.py`                | `echo > file.py`                 |                                |
+| Eseguire script Python      | `python file.py`               | `python file.py`                 | `python3 file.py` su Linux/Mac |
+| Creare virtualenv           | `python -m venv venv`          | `python -m venv venv`            |                                |
+| Attivare virtualenv         | `source venv/bin/activate`     | `venv\Scripts\activate`          |                                |
+| Disattivare virtualenv      | `deactivate`                   | `deactivate`                     |                                |
+| Installare pacchetto pip    | `pip install nome_pacchetto`   | `pip install nome_pacchetto`     |                                |
+| Vedere pacchetti installati | `pip list`                     | `pip list`                       |                                |
+| Rimuovere pacchetto         | `pip uninstall nome_pacchetto` | `pip uninstall nome_pacchetto`   |                                |
+| Copiare file                | `cp origine destinazione`      | `Copy-Item origine destinazione` |                                |
+| Spostare/ rinominare file   | `mv origine destinazione`      | `Move-Item origine destinazione` |                                |
+| Cancellare file             | `rm file`                      | `Remove-Item file`               | `rm -r cartella` per cartelle  |
+
+
