@@ -2,9 +2,9 @@
 
 while True:
 
-    numero = int(input("Inserisci un numero e ti dirò se è pari o dispari: "))
+    # numero = int(input("Inserisci un numero e ti dirò se è pari o dispari: "))
 
-    if numero % 2 == 0:
+    if ( numero := int(input("Inserisci un numero e ti dirò se è pari o dispari: "))) % 2 == 0:     #operatore tricheco
         print(f"il {numero} è pari \n")
         
     else:
