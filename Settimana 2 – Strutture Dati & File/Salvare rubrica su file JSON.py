@@ -13,10 +13,6 @@ with open("rubrica.json", "w") as file:
     json.dump(rubrica, file, indent=4)
 
 
-
-
-
-
 with open("rubrica.json", "r") as file:
     rubrica = json.load(file)
 
@@ -26,7 +22,7 @@ print(rubrica)
 
 import json
 
-# 1️⃣ Creazione rubrica
+#Creazione rubrica
 rubrica = {}
 
 while True:
@@ -38,13 +34,13 @@ while True:
     telefono = input("Inserisci numero di telefono: ")
     rubrica[nome] = telefono
 
-# 2️⃣ Salvataggio su file
+#Salvataggio su file
 with open("rubrica.json", "w") as file:
     json.dump(rubrica, file, indent=4)
 
 print("Rubrica salvata!")
 
-# 3️⃣ Lettura dal file
+#Lettura dal file
 with open("rubrica.json", "r") as file:
     dati = json.load(file)
 
