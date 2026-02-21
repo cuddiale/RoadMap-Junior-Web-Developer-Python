@@ -1,17 +1,13 @@
-'''Argomenti
+"""Argomenti
 
-    Dizionari
-    Chiave / valore
-    get(), keys(), values()
-'''
+Dizionari
+Chiave / valore
+get(), keys(), values()
+"""
 
 # Dizionario Utente
 
-utente = {
-    "username": "mario123",
-    "email": "mario@email.com",
-    "attivo": True
-}
+utente = {"username": "mario123", "email": "mario@email.com", "attivo": True}
 
 print("Username:", utente["username"])
 print("Email:", utente["email"])
@@ -45,17 +41,16 @@ rubrica = {}
 
 while True:
     scelta = input("1) Aggiungi  2) Cerca  3) Esci: ")
-    
+
     if scelta == "1":
         nome = input("Nome: ")
         numero = input("Numero: ")
         rubrica[nome] = numero
-        
+
     elif scelta == "2":
         nome = input("Nome da cercare: ")
         numero = rubrica.get(nome, "Contatto non trovato")
         print(numero)
-        
+
     elif scelta == "3":
         break
-
