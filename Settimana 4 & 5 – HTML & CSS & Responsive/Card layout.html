@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Card Layout</title>
+
+    <style>
+        /* 1. VARIABILI E SETUP */
+        :root {
+            --bg-body: #f4f7f6;
+            --bg-card: #ffffff;
+            --primary-color: #3498db;
+            --text-main: #2c3e50;
+            --text-muted: #7f8c8d;
+            --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* 2. LA GRIGLIA (GRID) */
+        .card-container {
+            display: grid;
+            /* Crea colonne che si adattano automaticamente allo spazio (minimo 300px) */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 3. STILE DELLA SINGOLA CARD */
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            /* Taglia l'immagine se esce dai bordi arrotondati */
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Effetto al passaggio del mouse */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Immagine segnaposto */
+        .card-image {
+            height: 200px;
+            background: #ddd linear-gradient(45deg, #bbb, #ddd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #888;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: rgba(52, 152, 219, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+        }
+
+        .card-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            /* Spinge il footer sempre in fondo alla card */
+            padding: 20px 25px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-more {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .btn-more:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>I Nostri Corsi</h1>
+        <p>Scopri le ultime novità nel mondo dello sviluppo web</p>
+    </header>
+
+    <main class="card-container">
+
+        <article class="card">
+            <div class="card-image">HTML & CSS</div>
+            <div class="card-content">
+                <span class="card-tag">Frontend</span>
+                <h2 class="card-title">Fondamenti di Design</h2>
+                <p class="card-description">Impara a strutturare pagine web moderne e responsive utilizzando le ultime
+                    tecniche di layout.</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn-more">Leggi di più →</a>
+                <span class="date">26 Feb 2026</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image" style="background: linear-gradient(45deg, #f1c40f, #f39c12); color: white;">
+                JavaScript</div>
+            <div class="card-content">
+                <span class="card-tag">Programmazione</span>
+                <h2 class="card-title">Logica e Funzioni</h2>
+                <p class="card-description">Rendi le tue pagine interattive. Dalla manipolazione del DOM alle chiamate
+                    API asincrone.</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn-more">Leggi di più →</a>
+                <span class="date">20 Feb 2026</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image" style="background: linear-gradient(45deg, #9b59b6, #8e44ad); color: white;">Backend
+            </div>
+            <div class="card-content">
+                <span class="card-tag">Server Side</span>
+                <h2 class="card-title">Database NoSQL</h2>
+                <p class="card-description">Esplora il mondo della gestione dati moderna e scopri come scalare le tue
+                    applicazioni.</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn-more">Leggi di più →</a>
+                <span class="date">15 Feb 2026</span>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+
+</html>
