@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ita">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contenitore {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #messaggioBenvenuto {
+            margin-top: 20px;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="messaggioBenvenuto">Inserisci i tuoi dati</h1>
+
+    <div class="contenitore">
+        <form id="mioForm">
+            <input type="text" id="inputNome" placeholder="Come ti chiami?" required>
+
+            <label for="inputColore">Scegli un colore per il titolo:</label>
+            <input type="color" id="inputColore" value="#ff0000">
+
+            <button type="submit">Invia Dati</button>
+            <button type="button" id="btnReset">Torna Originale</button>
+        </form>
+    </div>
+
+    <script>
+        // 1. SELEZIONE DEGLI ELEMENTI
+        const form = document.querySelector("#mioForm");
+        const titolo = document.querySelector("#messaggioBenvenuto");
+        const inputNome = document.querySelector("#inputNome");
+        const inputColore = document.querySelector("#inputColore");
+        const btnReset = document.querySelector("#btnReset");
+
+        // 2. GESTIONE EVENTO 'SUBMIT'
+        form.addEventListener("submit", function (event) {
+            // Fondamentale: impedisce alla pagina di ricaricarsi!
+            event.preventDefault();
+
+            // Prendiamo i valori attuali dei campi di input
+            const nomeUtente = inputNome.value;
+            const coloreScelto = inputColore.value;
+
+            // Modifichiamo il titolo
+            titolo.innerText = "Ciao, " + nomeUtente + "!";
+            titolo.style.color = coloreScelto;
+            titolo.style.fontSize = "50px";
+        });
+
+        // 3. GESTIONE EVENTO 'CLICK' PER RESET
+        btnReset.addEventListener("click", function () {
+            titolo.innerText = "Inserisci i tuoi dati";
+            titolo.style.color = "black";
+            titolo.style.fontSize = "32px";
+            form.reset(); // Svuota i campi del form automaticamente
+        });
+    </script>
+
+</body>
+
+</html>
