@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Input Diretto</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #495057;
+            margin-top: 0;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 2px solid #ced4da;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #28a745;
+            /* Cambia colore quando scrivi */
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 80%;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #risultato {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #28a745;
+            min-height: 1.5em;
+            /* Evita che il box "salti" quando appare il testo */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Ciao! 👋</h2>
+        <p>Scrivi il tuo nome qui sotto:</p>
+
+        <input type="text" id="nomeInput" placeholder="Esempio: Mario">
+
+        <br>
+
+        <button id="inviaBtn">Saluta!</button>
+
+        <div id="risultato"></div>
+    </div>
+
+    <script>
+        // Selezioniamo gli elementi
+        const input = document.getElementById('nomeInput');
+        const bottone = document.getElementById('inviaBtn');
+        const display = document.getElementById('risultato');
+
+        // Funzione per mostrare il saluto
+        bottone.addEventListener('click', function () {
+            const valore = input.value.trim(); // .value prende quello che c'è scritto nell'input
+
+            if (valore !== "") {
+                display.textContent = "Benvenuto, " + valore + "!";
+                // Puliamo l'input dopo l'invio
+                input.value = "";
+            } else {
+                display.textContent = "Per favore, scrivi qualcosa!";
+                display.style.color = "#dc3545"; // Cambia in rosso se vuoto
+            }
+        });
+
+        // BONUS: Se vuoi che funzioni anche premendo "Invio" sulla tastiera
+        input.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                bottone.click();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
