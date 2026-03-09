@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio UX Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            transition: all 0.4s ease;
+            color: #333;
+        }
+
+        .contenitore {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 5px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        /* Stile per il messaggio di errore */
+        #errorMsg {
+            color: red;
+            font-size: 12px;
+            visibility: hidden;
+            /* Nascosto di default */
+        }
+
+        input[type="color"] {
+            width: 100%;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            background: none;
+        }
+
+        .azioni {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #btnReset {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        #btnReset:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="messaggioBenvenuto">Inserisci i tuoi dati</h1>
+
+    <div class="contenitore">
+        <form id="mioForm">
+            <div class="input-group">
+                <input type="text" id="inputNome" placeholder="Come ti chiami?" autocomplete="off">
+                <small id="errorMsg">Il nome deve avere almeno 3 caratteri</small>
+            </div>
+
+            <div class="input-group">
+                <label for="inputColore">Scegli un colore per il titolo:</label>
+                <input type="color" id="inputColore" value="#ff0000">
+            </div>
+
+            <div class="azioni">
+                <button type="submit" id="btnInvia">Invia Dati</button>
+                <button type="button" id="btnReset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>const form = document.querySelector("#mioForm");
+        const titolo = document.querySelector("#messaggioBenvenuto");
+        const inputNome = document.querySelector("#inputNome");
+        const inputColore = document.querySelector("#inputColore");
+        const btnInvia = document.querySelector("#btnInvia");
+        const btnReset = document.querySelector("#btnReset");
+        const errorMsg = document.querySelector("#errorMsg");
+
+        function validaInput() {
+            const nomeValore = inputNome.value.trim();
+
+            if (nomeValore.length >= 3) {
+                inputNome.style.borderColor = "green";
+                errorMsg.style.visibility = "hidden"; // Nascondi errore
+                btnInvia.disabled = false;
+                btnInvia.style.opacity = "1";
+                btnInvia.style.cursor = "pointer";
+            } else {
+                inputNome.style.borderColor = "red";
+                // Mostra errore solo se l'utente ha iniziato a scrivere
+                errorMsg.style.visibility = nomeValore.length > 0 ? "visible" : "hidden";
+                btnInvia.disabled = true;
+                btnInvia.style.opacity = "0.5";
+                btnInvia.style.cursor = "not-allowed";
+            }
+        }
+
+        inputNome.addEventListener("input", validaInput);
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            btnInvia.innerText = "Invio in corso...";
+
+            setTimeout(() => {
+                titolo.innerText = `Benvenuto, ${inputNome.value}!`;
+                titolo.style.color = inputColore.value;
+                titolo.style.transform = "scale(1.2)"; // Un piccolo effetto extra
+                btnInvia.innerText = "Invia Dati";
+                alert("Dati salvati con successo!");
+            }, 500);
+        });
+
+        btnReset.addEventListener("click", () => {
+            form.reset();
+            inputNome.style.borderColor = "#ccc";
+            titolo.style.transform = "scale(1)";
+            titolo.innerText = "Inserisci i tuoi dati";
+            titolo.style.color = "black";
+            validaInput();
+        });
+
+        validaInput();</script>
+</body>
+
+</html>
