@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 2 - Navbar & Features</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #fff;
+        }
+
+        /* NAVBAR CON FLEXBOX */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Logo a sinistra, Link a destra */
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #333;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            /* Spazio tra i link */
+        }
+
+        /* SEZIONE FEATURES (Mobile First: di base sono in colonna) */
+        .features-container {
+            display: flex;
+            flex-direction: column;
+            /* Uno sopra l'altro su mobile */
+            gap: 20px;
+            padding: 40px 5%;
+        }
+
+        .feature-box {
+            background-color: #e9ecef;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #dee2e6;
+        }
+
+        /* MEDIA QUERY (Per Desktop: sopra i 768px cambiamo layout) */
+        @media (min-width: 768px) {
+            .features-container {
+                flex-direction: row;
+                /* Diventano affiancati su schermi grandi */
+            }
+
+            .feature-box {
+                flex: 1;
+                /* Ognuno prende lo stesso spazio della riga */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"><strong>MY LOGO</strong></div>
+        <ul>
+            <li>Home</li>
+            <li>Servizi</li>
+            <li>Contatti</li>
+        </ul>
+    </nav>
+
+    <div class="features-container">
+        <div class="feature-box">
+            <h3>Veloce</h3>
+            <p>Le prestazioni sono al primo posto.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Sicuro</h3>
+            <p>I tuoi dati sono sempre protetti.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Moderno</h3>
+            <p>Layout pulito e responsive.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

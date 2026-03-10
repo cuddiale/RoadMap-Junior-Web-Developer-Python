@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 1 - Profile Card</title>
+    <style>
+        /* 1. IL RESET (Sempre presente!) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. LAYOUT GLOBALE (Flexbox per centrare) */
+        body {
+            display: flex;
+            justify-content: center;
+            /* Centra orizzontalmente */
+            align-items: center;
+            /* Centra verticalmente */
+            min-height: 100vh;
+            /* Prende tutta l'altezza dello schermo */
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+        }
+
+        /* 3. LA CARD (Il Box Model) */
+        .card {
+            background-color: white;
+            width: 300px;
+
+            /* --- GIOCA QUI CON I GENERATORI --- */
+            padding: 25px;
+            /* Spazio interno */
+            border-radius: 15px;
+            /* Angoli arrotondati */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            /* Ombra esterna */
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #007bff, #00ff88);
+            /* Esempio gradiente */
+            border-radius: 50%;
+            /* La rende un cerchio */
+            margin: 0 auto 15px auto;
+            /* Centra l'immagine e dà margine sotto */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="profile-img"></div>
+        <h2>Mario Rossi</h2>
+        <p>Web Developer appassionato di CSS e Flexbox. Sto resettando le mie competenze!</p>
+        <button>Segui Profilo</button>
+    </div>
+
+</body>
+
+</html>
