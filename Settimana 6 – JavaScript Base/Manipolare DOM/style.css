@@ -1,0 +1,74 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.main-container {
+  display: flex;
+  gap: 50px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.color-picker {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.blue {
+  background: #3498db;
+}
+.red {
+  background: #e74c3c;
+}
+.dark {
+  background: #2c3e50;
+}
+
+/* LA CARD DA MANIPOLARE */
+.preview-card {
+  width: 300px;
+  height: 180px;
+  background: #3498db; /* Colore iniziale */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  width: fit-content;
+  margin-top: 10px;
+}

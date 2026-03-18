@@ -1,0 +1,49 @@
+/* Stili base */
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition:
+    background 0.5s,
+    color 0.5s; /* Transizione fluida */
+}
+
+.container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  color: #333;
+}
+
+/* Classe per nascondere elementi */
+.hidden {
+  display: none;
+}
+
+/* --- TEMI --- */
+.light-theme {
+  background-color: #f0f2f5;
+}
+
+.dark-theme {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .container {
+  background-color: #2d2d2d;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}

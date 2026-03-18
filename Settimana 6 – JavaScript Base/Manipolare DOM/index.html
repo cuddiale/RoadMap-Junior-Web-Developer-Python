@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manipolazione DOM: Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="editor">
+            <h2>Crea la tua Card</h2>
+            <input type="text" id="in-nome" placeholder="Nome e Cognome">
+            <input type="text" id="in-ruolo" placeholder="Professione (es. Developer)">
+
+            <label>Scegli Colore Tema:</label>
+            <div class="color-picker">
+                <button class="dot blue" data-color="#3498db"></button>
+                <button class="dot red" data-color="#e74c3c"></button>
+                <button class="dot dark" data-color="#2c3e50"></button>
+            </div>
+
+            <button id="btn-update">Genera Card</button>
+        </div>
+
+        <div class="preview-card" id="card-box">
+            <h1 id="out-nome">Il Tuo Nome</h1>
+            <p id="out-ruolo">La Tua Professione</p>
+            <div class="badge">Professional</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
