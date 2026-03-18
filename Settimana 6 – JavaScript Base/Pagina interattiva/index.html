@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Interattiva</title>
+    <title>Esercizio: Pagina Interattiva</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <div class="card" id="main-card">
+        <h1 id="titolo-profilo">Il Mio Profilo</h1>
+        <p id="bio-utente">Questa è la mia biografia iniziale. Clicca i bottoni per cambiarmi!</p>
+
+        <hr>
+
+        <div class="controlli">
+            <label for="input-nome">Nuovo Nome:</label>
+            <input type="text" id="input-nome" placeholder="Scrivi un nome...">
+
+            <div class="pulsantiera">
+                <button id="btn-cambia-testo">Aggiorna Testo</button>
+                <button id="btn-cambia-colore">Cambia Look</button>
+                <button id="btn-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
