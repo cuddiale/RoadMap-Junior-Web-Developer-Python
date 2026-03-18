@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio: Alert Dinamici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-content">
+        <h1>Gestore Notifiche</h1>
+        <p>Clicca i bottoni per generare alert dinamici nel DOM.</p>
+
+        <div class="button-group">
+            <button onclick="creaAlert('Operazione completata!', 'success')">Successo</button>
+            <button onclick="creaAlert('Errore di sistema!', 'error')">Errore</button>
+            <button onclick="creaAlert('Attenzione: Spazio esaurito', 'warning')">Attenzione</button>
+        </div>
+    </div>
+
+    <div id="alert-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

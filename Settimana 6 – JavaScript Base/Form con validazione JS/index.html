@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giorno 4 - Validazione Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Registrazione Utente</h2>
+        <form id="registro-form">
+            <div class="input-group">
+                <label for="username">Nome Utente (min 3 caratteri):</label>
+                <input type="text" id="username" placeholder="Inserisci username">
+                <span id="error-username" class="error-msg"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="esempio@mail.it">
+                <span id="error-email" class="error-msg"></span>
+            </div>
+
+            <button type="submit">Registrati</button>
+        </form>
+        <p id="success-msg"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

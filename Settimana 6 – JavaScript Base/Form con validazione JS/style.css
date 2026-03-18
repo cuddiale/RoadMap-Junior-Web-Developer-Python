@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+.form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Classi per la validazione */
+.error-msg {
+  color: #d9534f;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 5px;
+  min-height: 1em;
+}
+.input-error {
+  border: 2px solid #d9534f;
+}
+#success-msg {
+  color: #5cb85c;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
