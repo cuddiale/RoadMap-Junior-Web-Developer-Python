@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS CRUD - Rubrica Contatti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <h1>📇 Rubrica Contatti (CRUD)</h1>
+
+        <form id="contact-form" class="card">
+            <h3>Nuovo Contatto</h3>
+            <input type="text" id="name" placeholder="Nome Completo" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit" id="save-btn">Aggiungi Contatto</button>
+        </form>
+
+        <div id="loader" class="hidden">Caricamento in corso...</div>
+
+        <div id="contact-list" class="grid">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

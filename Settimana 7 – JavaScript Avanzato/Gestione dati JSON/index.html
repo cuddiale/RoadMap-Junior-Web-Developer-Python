@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giorno 1 - JSON Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Gestione Inventario JSON</h1>
+
+        <div class="input-box">
+            <input type="text" id="prod-nome" placeholder="Nome Prodotto">
+            <input type="number" id="prod-prezzo" placeholder="Prezzo">
+            <button id="btn-save">Salva e Converti</button>
+        </div>
+
+        <hr>
+
+        <div class="display-area">
+            <h3>1. Stringa JSON (Stringify):</h3>
+            <code id="json-output">In attesa di dati...</code>
+
+            <h3>2. Dati Ricostruiti (Parse):</h3>
+            <div id="obj-output" class="card-preview">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
