@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 5: Form Flask</title>
+</head>
+
+<body>
+    <h1>Inviaci un messaggio ✉️</h1>
+    <p>Compila il modulo inserendo il tuo nome.</p>
+
+    <form method="POST" action="/invia-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome_utente" placeholder="Scrivi qui...">
+        <button type="submit">Invia Messaggio</button>
+    </form>
+</body>
+
+</html>
