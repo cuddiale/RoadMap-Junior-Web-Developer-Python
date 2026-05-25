@@ -4,9 +4,10 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def home():
-    return "<h1>Ciao! La tua app Flask funziona alla perfezione! 🚀</h1>"
+def index():
+    return "<h1>Esercizio 1: App Flask Base Funzionante! 🚀</h1>"
 
 
 if __name__ == "__main__":
+    # Avviamo il server locale
     app.run(debug=True)
