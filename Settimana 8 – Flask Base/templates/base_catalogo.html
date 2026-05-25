@@ -4,25 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block titolo %}Tech Store{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stile.css') }}">
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 40px;">
+<body>
 
-    <nav>
-        <a href="/">🏠 Home Catalogo</a> |
-        <a href="/nuovo">➕ Aggiungi Prodotto</a>
-    </nav>
-    <hr>
+    <div class="container">
+        <nav>
+            <a href="/">🏠 Home Catalogo</a> |
+            <a href="/nuovo">➕ Aggiungi Prodotto</a>
+        </nav>
 
-    <div>
-        {% block contenuto %}
-        {% endblock %}
+        <div>
+            {% block contenuto %}
+            {% endblock %}
+        </div>
+
+        <footer>
+            <p><em>Tech Store S.r.l. — Mini App Flask Base (Settimana 8)</em></p>
+        </footer>
     </div>
-
-    <hr>
-    <footer>
-        <p><em>Tech Store S.r.l. — Mini App Flask Base (Settimana 8)</em></p>
-    </footer>
 
 </body>
 

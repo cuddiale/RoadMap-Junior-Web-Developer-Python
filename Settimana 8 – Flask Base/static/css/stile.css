@@ -1,0 +1,136 @@
+/* Stile Generale della Pagina */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e24;
+  color: #f4f4f9;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenitore Principale per centrare il sito */
+.container {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Barra di Navigazione */
+nav {
+  background-color: #2a2a35;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+nav a {
+  color: #4ea8de;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #56cfe1;
+}
+
+/* Titoli */
+h1 {
+  color: #56cfe1;
+  border-bottom: 2px solid #2a2a35;
+  padding-bottom: 10px;
+}
+
+/* Liste di Prodotti */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #2a2a35;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulsanti e Link di Rimozione */
+.btn-elimina {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.btn-elimina:hover {
+  opacity: 0.7;
+}
+
+/* Form e Input */
+form {
+  background-color: #2a2a35;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #56cfe1;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1e1e24;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4ea8de;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #56cfe1;
+}
+
+/* Messaggi di Errore */
+.errore {
+  background-color: #ff6b6b33;
+  color: #ff6b6b;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #ff6b6b;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}

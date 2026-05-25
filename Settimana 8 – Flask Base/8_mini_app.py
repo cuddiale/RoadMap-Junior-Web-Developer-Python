@@ -11,10 +11,19 @@ CATALOGO_PRODOTTI = {
 prossimo_id = 4
 
 
-# 1. READ: Mostra la lista dei prodotti (Home Page)
+# 1. READ: Mostra la lista dei prodotti (Home Page) e calcola il totale
 @app.route("/")
 def home_catalogo():
-    return render_template("catalogo.html", prodotti=CATALOGO_PRODOTTI)
+    # Calcoliamo il totale sommando i prezzi di tutti i prodotti nel dizionario
+    totale_magazzino = sum(info["prezzo"] for info in CATALOGO_PRODOTTI.values())
+
+    # Arrotondiamo a 2 cifre decimali per evitare brutti difetti di virgola mobile
+    totale_magazzino = round(totale_magazzino, 2)
+
+    # Passiamo sia i prodotti sia il totale al file HTML
+    return render_template(
+        "catalogo.html", prodotti=CATALOGO_PRODOTTI, totale=totale_magazzino
+    )
 
 
 # 2. FORM DI INSERIMENTO (GET)

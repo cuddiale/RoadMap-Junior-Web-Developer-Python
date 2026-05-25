@@ -8,12 +8,18 @@
 
 <ul>
     {% for id_prod, info in prodotti.items() %}
-    <li style="margin-bottom: 10px;">
-        <strong>{{ info.nome }}</strong> — {{ info.prezzo }}€
-        <a href="/elimina/{{ id_prod }}" style="color: red; margin-left: 15px;">[Rimuovi]</a>
+    <li>
+        <span><strong>{{ info.nome }}</strong> — {{ info.prezzo }}€</span>
+        <a href="/elimina/{{ id_prod }}" class="btn-elimina">[Rimuovi]</a>
     </li>
     {% else %}
     <p>Il magazzino è vuoto! Usa il link in alto per aggiungere dei prodotti.</p>
     {% endfor %}
 </ul>
+
+<div
+    style="background-color: #2a2a35; padding: 15px; margin-top: 25px; border-radius: 6px; border-left: 4px solid #4ea8de; display: flex; justify-content: space-between; align-items: center;">
+    <span style="font-size: 18px; font-weight: bold; color: #56cfe1;">Valore Totale Magazzino:</span>
+    <span style="font-size: 22px; font-weight: bold; color: #fff;">{{ totale }}€</span>
+</div>
 {% endblock %}
