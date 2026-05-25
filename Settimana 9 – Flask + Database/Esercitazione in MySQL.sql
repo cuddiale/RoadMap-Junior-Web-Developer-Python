@@ -1,0 +1,1 @@
+-- Esercitazione online per MySQL query
