@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 7: CRUD in memoria</title>
+</head>
+
+<body>
+    <h1>Lista delle cose da fare (CRUD) 📋</h1>
+
+    <form method="POST" action="/todo/aggiungi">
+        <input type="text" name="nuovo_task" placeholder="Scrivi un nuovo task...">
+        <button type="submit">Aggiungi</button>
+    </form>
+
+    <hr>
+
+    <ul>
+        {% for id_task, testo_task in lista_task.items() %}
+        <li>
+            {{ testo_task }}
+            <a href="/todo/elimina/{{ id_task }}" style="color: red; margin-left: 10px;">[Elimina]</a>
+        </li>
+        {% else %}
+        <p>Nessun impegno per oggi! 🎉</p>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

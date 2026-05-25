@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titolo %}Il mio Sito{% endblock %}</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="/struttura/home">Home</a> |
+        <a href="/struttura/info">Informazioni</a>
+    </nav>
+    <hr>
+
+    <div>
+        {% block contenuto %}
+        {% endblock %}
+    </div>
+
+    <hr>
+    <footer>
+        <p>© 2026 - Esercitazione Layout Base Flask</p>
+    </footer>
+
+</body>
+
+</html>
