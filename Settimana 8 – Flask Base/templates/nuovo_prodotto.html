@@ -1,0 +1,25 @@
+{% extends 'base_catalogo.html' %}
+
+{% block titolo %}Aggiungi Prodotto{% endblock %}
+
+{% block contenuto %}
+<h1>Inserisci un nuovo prodotto nel catalogo 📦</h1>
+
+{% if errore %}
+<p style="color: red; font-weight: bold;">⚠️ Errore: {{ errore }}</p>
+{% endif %}
+
+<form method="POST" action="/nuovo">
+    <div style="margin-bottom: 10px;">
+        <label for="nome">Nome Prodotto:</label><br>
+        <input type="text" id="nome" name="nome_prodotto" placeholder="Esempio: Mouse Wireless">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="prezzo">Prezzo (€):</label><br>
+        <input type="number" id="prezzo" name="prezzo_prodotto" step="0.01" placeholder="Esempio: 29.99">
+    </div>
+
+    <button type="submit" style="padding: 5px 15px;">Salva nel Catalogo</button>
+</form>
+{% endblock %}

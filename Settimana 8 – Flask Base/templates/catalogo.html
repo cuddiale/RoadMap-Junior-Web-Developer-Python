@@ -1,0 +1,19 @@
+{% extends 'base_catalogo.html' %}
+
+{% block titolo %}Catalogo Prodotti{% endblock %}
+
+{% block contenuto %}
+<h1>Benvenuto nel Tech Store! 💻🎧</h1>
+<p>Ecco i prodotti attualmente disponibili in magazzino:</p>
+
+<ul>
+    {% for id_prod, info in prodotti.items() %}
+    <li style="margin-bottom: 10px;">
+        <strong>{{ info.nome }}</strong> — {{ info.prezzo }}€
+        <a href="/elimina/{{ id_prod }}" style="color: red; margin-left: 15px;">[Rimuovi]</a>
+    </li>
+    {% else %}
+    <p>Il magazzino è vuoto! Usa il link in alto per aggiungere dei prodotti.</p>
+    {% endfor %}
+</ul>
+{% endblock %}

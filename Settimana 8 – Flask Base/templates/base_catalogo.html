@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titolo %}Tech Store{% endblock %}</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 40px;">
+
+    <nav>
+        <a href="/">🏠 Home Catalogo</a> |
+        <a href="/nuovo">➕ Aggiungi Prodotto</a>
+    </nav>
+    <hr>
+
+    <div>
+        {% block contenuto %}
+        {% endblock %}
+    </div>
+
+    <hr>
+    <footer>
+        <p><em>Tech Store S.r.l. — Mini App Flask Base (Settimana 8)</em></p>
+    </footer>
+
+</body>
+
+</html>
